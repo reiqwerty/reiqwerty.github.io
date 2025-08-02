@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | reiqwerty</title>
+  <title>reiqwerty | Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a2e0e6cf14.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
@@ -55,10 +55,19 @@
 </head>
 
 <body class="bg-gray-900 text-gray-100">
-  <header class="sticky top-0 z-50 bg-gray-900 shadow-md">
+  <header class="sticky top-0 z-50 bg-gray-900 shadow-md animate__animated animate__fadeInDown">
     <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-indigo-400">reiqwerty</h1>
-      <ul class="flex space-x-6">
+  
+      <!-- Hamburger Menu Button (Mobile Only) -->
+      <div class="md:hidden">
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="text-white text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+  
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6">
         <li><a href="index.html#home" class="nav-link hover:text-amber-400">Home</a></li>
         <li><a href="index.html#about" class="nav-link hover:text-amber-400">About</a></li>
         <li><a href="index.html#projects" class="nav-link hover:text-amber-400">Projects</a></li>
@@ -66,6 +75,15 @@
         <li><a href="index.html#contact" class="nav-link hover:text-amber-400">Contact</a></li>
       </ul>
     </nav>
+  
+    <!-- Mobile Menu -->
+    <ul id="mobileMenu" class="md:hidden px-6 pb-4 space-y-2 hidden flex-col text-sm">
+      <li><a href="index.html#home" class="nav-link block hover:text-amber-400">Home</a></li>
+      <li><a href="index.html#about" class="nav-link block hover:text-amber-400">About</a></li>
+      <li><a href="index.html#projects" class="nav-link block hover:text-amber-400">Projects</a></li>
+      <li><a href="index.html#certificates" class="nav-link block hover:text-amber-400">Certificates</a></li>
+      <li><a href="index.html#contact" class="nav-link block hover:text-amber-400">Contact</a></li>
+    </ul>
   </header>
 
   <main class="max-w-7xl mx-auto px-4 py-16">
@@ -241,6 +259,11 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
   </script>
 </body>
 

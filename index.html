@@ -8,7 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a2e0e6cf14.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -47,7 +47,12 @@
   <header class="sticky top-0 z-50 bg-gray-900 shadow-md animate__animated animate__fadeInDown">
     <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-indigo-400">reiqwerty</h1>
-      <ul class="flex space-x-6">
+      <div class="md:hidden">
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="text-white text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul class="hidden md:flex space-x-6">
         <li><a href="#home" class="nav-link hover:text-amber-400">Home</a></li>
         <li><a href="#about" class="nav-link hover:text-amber-400">About</a></li>
         <li><a href="#projects" class="nav-link hover:text-amber-400">Projects</a></li>
@@ -55,40 +60,37 @@
         <li><a href="#contact" class="nav-link hover:text-amber-400">Contact</a></li>
       </ul>
     </nav>
+    <ul id="mobileMenu" class="md:hidden px-6 pb-4 space-y-2 hidden flex-col text-sm">
+      <li><a href="#home" class="nav-link block hover:text-amber-400">Home</a></li>
+      <li><a href="#about" class="nav-link block hover:text-amber-400">About</a></li>
+      <li><a href="#projects" class="nav-link block hover:text-amber-400">Projects</a></li>
+      <li><a href="#certificates" class="nav-link block hover:text-amber-400">Certificates</a></li>
+      <li><a href="#contact" class="nav-link block hover:text-amber-400">Contact</a></li>
+    </ul>
   </header>
 
-  <section id="home"
-    class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900 text-center p-8 fade-in">
-
+  <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900 text-center p-6 fade-in">
     <div id="tsparticles" class="absolute inset-0 -z-10"></div>
-
     <div>
-      <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Rayhan Fathurrahman Rabbani here.</h2>
-      <p class="text-xl md:text-2xl text-indigo-300">A Passionate Software Engineer</p>
+      <h2 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4">Rayhan Fathurrahman Rabbani here.</h2>
+      <p class="text-lg sm:text-xl md:text-2xl text-indigo-300">A Passionate Software Engineer</p>
     </div>
   </section>
 
-  <section id="about" class="max-w-6xl mx-auto px-6 py-16 animate__animated animate__fadeIn">
+  <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 animate__animated animate__fadeIn">
     <h2 class="text-3xl font-bold text-indigo-400 mb-10 text-center">About Me</h2>
-  
     <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-10">
-      <img src="asset/profile.jpg" alt="Profile"
-        class="w-48 aspect-square object-cover rounded-full border border-indigo-300 shadow-md mb-6 md:mb-0">
-  
+      <img src="asset/profile.jpg" alt="Profile" class="w-40 sm:w-48 aspect-square object-cover rounded-full border border-indigo-300 shadow-md mb-6 md:mb-0">
       <div>
-        <p class="text-lg mb-4">
+        <p class="text-base sm:text-lg mb-4">
           I’m a Web and Android Developer who’s still learning and growing. I may not be an expert yet, but I enjoy
-          building things with code and exploring how different technologies work together. I’ve worked on small
-          projects using tools like Github, Visual Studio Code, and Figma, and each one has helped me improve step by step.
+          building things with code and exploring how different technologies work together.
         </p>
-        <p class="text-lg mb-6">
+        <p class="text-base sm:text-lg mb-6">
           I’m especially interested in frontend development — I love turning UI designs into clean, responsive, and
-          interactive interfaces. Slicing designs and making things not only look good but also work well is something I
-          really enjoy. I’m always excited to learn more, take on new challenges, and keep growing as a developer.
+          interactive interfaces.
         </p>
-  
-        <a href="Rayhan Fathurrahman Rabbani CV.pdf" download
-          class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-lg shadow-md transition transform hover:scale-105">
+        <a href="Rayhan Fathurrahman Rabbani CV.pdf" download class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-lg shadow-md transition transform hover:scale-105">
           <i class="fas fa-download"></i> Download CV
         </a>
       </div>
