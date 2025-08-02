@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | reiqwerty</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a2e0e6cf14.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background-color: #f59e0b;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+  <header class="sticky top-0 z-50 bg-gray-900 shadow-md">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-400">reiqwerty</h1>
+      <ul class="flex space-x-6">
+        <li><a href="index.html#home" class="nav-link hover:text-amber-400">Home</a></li>
+        <li><a href="index.html#about" class="nav-link hover:text-amber-400">About</a></li>
+        <li><a href="index.html#projects" class="nav-link hover:text-amber-400">Projects</a></li>
+        <li><a href="index.html#certificates" class="nav-link hover:text-amber-400">Certificates</a></li>
+        <li><a href="index.html#contact" class="nav-link hover:text-amber-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold mb-10 text-indigo-400 text-center">All Projects</h2>
+
+    <div class="flex flex-wrap justify-center gap-6 mb-12">
+    
+      <div class="bg-gray-800 rounded-lg p-4 shadow-lg transform hover:scale-105 transition duration-300 fade-in-up max-w-sm">
+        <img src="asset/project/listclub.png" alt="Premiere League Club" class="h-[480px] w-auto object-contain mx-auto rounded mb-4" />
+        <h3 class="text-lg font-bold text-white mb-2">Premiere League Club List from SportsDB API | App</h3>
+        <p class="text-sm text-emerald-300 mb-3">This is a mobile application that fetches a list of Premier League football clubs using the SportsDB API. 
+          Users can browse official club data and add their favorite teams to a personalized favorites list. 
+          Built with Dart and GetX for state management, and integrated with Firebase for seamless data handling.</p>
+        <div class="flex gap-2 flex-wrap text-xs">
+          <span class="bg-[#02569B] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-flutter-plain !text-inherit"></i> Flutter
+          </span>
+          <span class="bg-[#0175C2] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-dart-plain !text-inherit"></i> Dart
+          </span>
+        </div>          
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-4 shadow-lg transform hover:scale-105 transition duration-300 fade-in-up max-w-sm">
+        <img src="asset/project/chart.png" alt="Top Chart List" class="h-[480px] w-auto object-contain mx-auto rounded mb-4" />
+        <h3 class="text-lg font-bold text-white mb-2">Top Chart Song from Deezer API | App</h3>
+        <p class="text-sm text-emerald-300 mb-3">This mobile application fetches the latest viral top chart songs using the Deezer API. 
+          Users can explore trending music with real-time updates and enjoy a smooth browsing experience.</p>
+        <div class="flex gap-2 flex-wrap text-xs">
+          <span class="bg-[#02569B] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-flutter-plain !text-inherit"></i> Flutter
+          </span>
+          <span class="bg-[#0175C2] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-dart-plain !text-inherit"></i> Dart
+          </span>
+        </div> 
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-4 shadow-lg transform hover:scale-105 transition duration-300 fade-in-up max-w-sm">
+        <img src="asset/project/seabank.png" alt="Seabank" class="h-[480px] w-auto object-contain mx-auto rounded mb-4" />
+        <h3 class="text-lg font-bold text-white mb-2">Seabank Slicing Design | App</h3>
+        <p class="text-sm text-emerald-300 mb-3">This project is a precise UI slicing of the Seabank mobile application, achieving a 99% design accuracy. 
+          It focuses purely on replicating the original interface, showcasing attention to layout detail, consistency, and responsiveness.</p>
+        <div class="flex gap-2 flex-wrap text-xs">
+          <span class="bg-[#02569B] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-flutter-plain !text-inherit"></i> Flutter
+          </span>
+          <span class="bg-[#0175C2] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-dart-plain !text-inherit"></i> Dart
+          </span>
+        </div> 
+      </div>
+
+    </div>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-gray-800 rounded-lg p-4 shadow-lg flex flex-col justify-between fade-in-up transform hover:scale-105 transition duration-300">
+        <img src="asset/website/chamartin.png" alt="Techcomfest 2025" class="w-full max-h-60 object-contain rounded mb-4" />
+        <h3 class="text-lg font-bold text-white mb-2">Techcomfest 2025 | Web App Competition November 2024 - December 2024</h3>
+        <p class="text-sm text-emerald-300 mb-3"> A responsive course website built for Techcomfest 2025 Web App Competition. 
+          Users can enroll in courses and earn official certificates upon completion. 
+          Designed with a clean and modern interface to enhance the learning experience.</p>
+          <div class="flex gap-2 flex-wrap text-xs mt-auto">
+            <span class="bg-[#E44D26] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+              <i class="devicon-html5-plain"></i> HTML
+            </span>
+            <span class="bg-[#38BDF8] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+              <i class="devicon-tailwindcss-plain"></i> Tailwind
+            </span>
+            <span class="bg-[#F55247] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+              <i class="devicon-laravel-plain"></i> Laravel
+            </span>
+            <span class="bg-[#00758F] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+              <i class="devicon-mysql-plain"></i> MySQL
+            </span>
+          </div>
+          
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-4 shadow-lg flex flex-col justify-between fade-in-up transform hover:scale-105 transition duration-300">
+        <img src="asset/website/kudus.png" alt="Kota Kudus" class="w-full max-h-60 object-contain rounded mb-4" />
+        <h3 class="text-lg font-bold text-white mb-2">Kota Kudus | Website</h3>
+        <p class="text-sm text-emerald-300 mb-3">This website highlights the rich culture of Kudus City by showcasing its history, traditional cuisine, and popular tourist destinations. </p>
+        <div class="flex gap-2 flex-wrap text-xs mt-auto">
+          <span class="bg-[#E44D26] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-html5-plain"></i> HTML
+          </span>
+          <span class="bg-[#264DE4] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-css3-plain"></i> CSS
+          </span>
+          <span class="bg-[#F7DF1E] text-black px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-javascript-plain"></i> JavaScript
+          </span>
+        </div>
+        
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-4 shadow-lg flex flex-col justify-between fade-in-up transform hover:scale-105 transition duration-300">
+        <img src="asset/website/mediacatering.png" alt="Media Catering" class="w-full max-h-60 object-contain rounded mb-4" />
+        <h3 class="text-lg font-bold text-white mb-2">Media Catering | Website</h3>
+        <p class="text-sm text-emerald-300 mb-3">This website introduces Media Catering, a local catering service that offers a wide variety of traditional snacks and meals. 
+          It features a clean layout to showcase the menu, pricing, and contact information for easy ordering. </p>
+        <div class="flex gap-2 flex-wrap text-xs mt-auto">
+          <span class="bg-[#E44D26] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-html5-plain"></i> HTML
+          </span>
+          <span class="bg-[#264DE4] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-css3-plain"></i> CSS
+          </span>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-4 shadow-lg flex flex-col justify-between fade-in-up transform hover:scale-105 transition duration-300">
+        <img src="asset/website/miraval.png" alt="Miraval Topup Store" class="w-full max-h-60 object-contain rounded mb-4" />
+        <h3 class="text-lg font-bold text-white mb-2">Miraval Topup Store | Website</h3>
+        <p class="text-sm text-emerald-300 mb-3">Miraval Topup Store is a simple and modern website designed for topping up Valorant game. 
+          It allows users to select their desired package and complete transactions easily.</p>
+        <div class="flex gap-2 flex-wrap text-xs mt-auto">
+          <span class="bg-[#E44D26] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-html5-plain"></i> HTML
+          </span>
+          <span class="bg-[#264DE4] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-css3-plain"></i> CSS
+          </span>
+          <span class="bg-[#F7DF1E] text-black px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="devicon-javascript-plain"></i> JavaScript
+          </span>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-4 shadow-lg flex flex-col justify-between fade-in-up transform hover:scale-105 transition duration-300">
+        <img src="asset/website/mirastore.png" alt="MiraPlay Web Figma Design" class="w-full max-h-60 object-contain rounded mb-4" />
+        <h3 class="text-lg font-bold text-white mb-2">MiraPlay | Figma Design</h3>
+        <p class="text-sm text-emerald-300 mb-3">
+          MiraPlay is a Figma design concept for an online game marketplace, featuring a clean and intuitive interface. 
+          It showcases a curated list of popular games available for purchase, with a focus on user experience and modern e-commerce layout.
+        </p>
+        <div class="flex gap-2 flex-wrap text-xs mt-auto">
+          <span class="bg-[#1e1e2f] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="fab fa-figma"></i> Figma
+          </span>          
+        </div>
+      </div>
+      
+
+      <div class="bg-gray-800 rounded-lg p-4 shadow-lg flex flex-col justify-between fade-in-up transform hover:scale-105 transition duration-300">
+        <img src="asset/website/komigear.png" alt="KomiGear Web Figma Design" class="w-full max-h-60 object-contain rounded mb-4" />
+        <h3 class="text-lg font-bold text-white mb-2">KomiGear | Figma Design</h3>
+        <p class="text-sm text-emerald-300 mb-3">KomiGear is a Figma design concept for an e-commerce website that specializes in selling gaming peripherals. 
+          The layout emphasizes a modern aesthetic, product-focused interface, and smooth user navigation to enhance the online shopping experience.</p>
+        <div class="flex gap-2 flex-wrap text-xs mt-auto">
+          <span class="bg-[#1e1e2f] text-white px-3 py-1 rounded-full flex items-center gap-1 hover:scale-110 transition">
+            <i class="fab fa-figma"></i> Figma
+          </span>          
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-center py-6 border-t border-gray-700">
+    <p class="text-gray-400">&copy; 2025 Rayhan Fathurrahman Rabbani. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
